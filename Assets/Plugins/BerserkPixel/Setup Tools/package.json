@@ -1,0 +1,11 @@
+{
+  "name":"com.berserkpixel.tools",
+  "version":"1.0.0",
+  "displayName":"Berserk Pixel's Tools",
+  "description": "Tools to increase production on game development for Unity",
+  "author":{
+    "name":"Berserk Pixel Game Studio",
+    "email":"hello@berserkpixel.studio",
+    "url":"https://berserkpixel.studio/"
+  }
+}

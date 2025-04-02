@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3a1d00c49566e2540a6315f5d2bf7d9a, type: 3}
+  m_Name: Skeleton
+  m_EditorClassIdentifier: 
+  ID: 754e30ae-e801-4b82-a154-77aa24c84d89
+  Type: 0
+  Prefab: {fileID: 1674829586238004934, guid: da86d9eb99d96b34f9d074de8b17a881, type: 3}
+  EditorPrefab: {fileID: 1674829586238004934, guid: da86d9eb99d96b34f9d074de8b17a881, type: 3}
+  MockPrefab: {fileID: 7989016403761500805, guid: 8fa023f5abd8a3f45bd0fa7012c188b4, type: 3}
+  OnlyCopy: 0
+  UIScale: 3

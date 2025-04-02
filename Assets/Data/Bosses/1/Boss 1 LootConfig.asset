@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 46b213ee65ee91345a90b57c84294652, type: 3}
+  m_Name: Boss 1 LootConfig
+  m_EditorClassIdentifier: 
+  LootChance: 1
+  LootSpawnRadius: 1.5
+  LootObjects:
+  - _item: {fileID: 1589250704464481442, guid: cbe56d9a06ee2a647860a7db75c8aadf, type: 3}
+    _weight: 3
+  - _item: {fileID: 6601177364881309037, guid: d68bbc6e87966b64490616d52d8e3d25, type: 3}
+    _weight: 1
+  LootAmount: 30

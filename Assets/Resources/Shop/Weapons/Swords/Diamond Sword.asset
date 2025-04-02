@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b577c9a3c8fb97e4ca844f2d64f2ac94, type: 3}
+  m_Name: Diamond Sword
+  m_EditorClassIdentifier: 
+  Name: Diamond Sword
+  ItemType: 0
+  Cost: 2000
+  Item: {fileID: 11400000, guid: a13e03318f8f94042a6aa832352c0c10, type: 2}
+  Icon: {fileID: -399483749778362393, guid: e3206133e5c2bf84dbe2111f4ed4d23b, type: 3}

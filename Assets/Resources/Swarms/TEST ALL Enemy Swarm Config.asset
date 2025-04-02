@@ -1,0 +1,74 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: de0ff43bd9564847b258c447871b1cc2, type: 3}
+  m_Name: TEST ALL Enemy Swarm Config
+  m_EditorClassIdentifier: 
+  AmountToSpawn: 4
+  Prefabs:
+  - _item: {fileID: 4332245038150939038, guid: 42d2d8888bd9b954391efa3a0316f5c7, type: 3}
+    _weight: 1
+  - _item: {fileID: 5506456018082997828, guid: de693007395d6e243be03a508d1c8b4a, type: 3}
+    _weight: 1
+  - _item: {fileID: 6520390357087853637, guid: dff921c550ff820449632e20224f4765, type: 3}
+    _weight: 1
+  - _item: {fileID: 9167048828174881698, guid: 489802b8c72f82d4fa595138bc320e75, type: 3}
+    _weight: 1
+  - _item: {fileID: 4814858073408653309, guid: 214b26eb00a8c7f4aa427e08f042ca53, type: 3}
+    _weight: 1
+  - _item: {fileID: 878029591140107449, guid: a2739aa779ecac24e9b6bbf271cae6c9, type: 3}
+    _weight: 1
+  - _item: {fileID: 623604382602449064, guid: 38cb8593e5fa94049bb830b3153d9c8e, type: 3}
+    _weight: 1
+  - _item: {fileID: 667061530636895044, guid: 2b632f53e70316b459af0a35e17c7d43, type: 3}
+    _weight: 1
+  - _item: {fileID: 8892874182124014881, guid: 281d2193d3e33614db63464bf65c26a1, type: 3}
+    _weight: 1
+  - _item: {fileID: 1438139141039937257, guid: e84421cb264337843b49c9018fb751c6, type: 3}
+    _weight: 1
+  - _item: {fileID: 2352578278429954463, guid: b3198842c6aa9b6418af99c87b0529c7, type: 3}
+    _weight: 1
+  - _item: {fileID: 7763414739359738183, guid: 86cfe4ed16fb1544b94bfbb3882c21f8, type: 3}
+    _weight: 1
+  - _item: {fileID: 7763414739359738183, guid: ad39b539ff7169e43841453eccab6e6b, type: 3}
+    _weight: 1
+  - _item: {fileID: 4655609050929569016, guid: 89ae22ea3707e754faf7a5e69ba496a7, type: 3}
+    _weight: 1
+  - _item: {fileID: 1083933256756895921, guid: 8333042b3c8a5b541a983f99068cf70a, type: 3}
+    _weight: 1
+  - _item: {fileID: 332554412513043621, guid: 41329d10a1452474a979a91bb0fb498e, type: 3}
+    _weight: 1
+  - _item: {fileID: 8441183481709015999, guid: 8bd229ac05abcc94fa7021e50a546bea, type: 3}
+    _weight: 1
+  - _item: {fileID: 5917214457574887837, guid: 256db5be51f41dd49bf90de365865eb8, type: 3}
+    _weight: 1
+  - _item: {fileID: 4655609050929569016, guid: da86d9eb99d96b34f9d074de8b17a881, type: 3}
+    _weight: 1
+  - _item: {fileID: 7789817464643140426, guid: 3464d8ef62992dd428f3adfada6ba11b, type: 3}
+    _weight: 1
+  - _item: {fileID: 5152313659154975908, guid: b46f3c46b21cdfc49afc34b6580c0137, type: 3}
+    _weight: 1
+  - _item: {fileID: 6955442147100808425, guid: 398e259e8756ed54781bd85098d5cbc5, type: 3}
+    _weight: 1
+  - _item: {fileID: 5551554722585263476, guid: 83875f9bcaefd3d499a296bcf1edc25f, type: 3}
+    _weight: 1
+  - _item: {fileID: 2270751305339279643, guid: e8cf6c01f1eb8184b9d48da104c74497, type: 3}
+    _weight: 1
+  - _item: {fileID: 5583302782985697512, guid: b6821e44f423d354fa10c15aa7d1a3ef, type: 3}
+    _weight: 1
+  - _item: {fileID: 8834498827572114982, guid: 9b29d304193a26847b6b69e83fedfc90, type: 3}
+    _weight: 1
+  - _item: {fileID: 6340713471808056285, guid: 63ef873b1208cae43a482d1b50551b9c, type: 3}
+    _weight: 1
+  AmountOfWaves: 1
+  AppearFxPrefab: {fileID: 1075223873430501751, guid: 79f63cb85efa0124bbbd104e2e0c0ce3, type: 3}
+  TimeForSpawnEnemy: 1.5
+  FxRotation: {x: -40, y: 0, z: 0}

@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbcc56f000eba904b83b1f65bb4c4633, type: 3}
+  m_Name: Boss 2 Spawn Beam 1
+  m_EditorClassIdentifier: 
+  Name: Boss 2 Spawn Beam 1
+  Damage: 1
+  KnockbackForce: 200
+  AttackCooldown: 2
+  AttackAnimation: Attack
+  PrefabNameToEnable: 
+  AttackType: 4
+  Range: 1
+  MaskWeaponSize: 1.8
+  ObjectPrefab: {fileID: 2081488597081359484, guid: 51118f5f86fd6604ab1445028f3446f0, type: 3}

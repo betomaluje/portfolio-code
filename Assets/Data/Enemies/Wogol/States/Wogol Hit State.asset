@@ -1,0 +1,17 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 654bdaf70f6d487a94603644871d84dd, type: 3}
+  m_Name: Wogol Hit State
+  m_EditorClassIdentifier: 
+  _timeToRecover: 0.8
+  _hitParticles:
+  - {fileID: 4572416853492060, guid: 07757cf211bd45044a1f1917658b9e66, type: 3}

@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8dca792b1de53284d920efd2350e7b31, type: 3}
+  m_Name: Portal Desert
+  m_EditorClassIdentifier: 
+  RealmName: Ignis Spire
+  TargetScene:
+    m_SceneAsset: {fileID: 102900000, guid: d5a98888a9017b24dbb36030c045a2c9, type: 3}
+    m_SceneName: Desert Dungeon Scene
+  MinWins: 7
+  BossScene:
+    m_SceneAsset: {fileID: 102900000, guid: 6303f05f5cb19d14e8cc3c2eea9d5690, type: 3}
+    m_SceneName: Boss2Scene
+  _requiredBiome: {fileID: 11400000, guid: 45598d33c33ee5a4690c188fbfc12974, type: 2}
+  _isDemoLocked: 0
+  _debug: 0

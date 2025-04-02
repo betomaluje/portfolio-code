@@ -1,0 +1,16 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bcbfaf6725ed4db3ae8b5f2508cd569c, type: 3}
+  m_Name: Enemy Attack State
+  m_EditorClassIdentifier: 
+  _attackConfig: {fileID: 11400000, guid: c948b6adc8c05384f9748f9f83814275, type: 2}
+  _predictionConfig: {fileID: 11400000, guid: 019871b28420bc64abc9c03f6af4aa2a, type: 2}

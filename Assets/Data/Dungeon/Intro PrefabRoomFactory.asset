@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7eb3f4910e99a92408927f9f6ecfbb62, type: 3}
+  m_Name: Intro PrefabRoomFactory
+  m_EditorClassIdentifier: 
+  _randomlySelect: 0
+  _prefabs:
+  - {fileID: 8384338223291309754, guid: 7b59c7d37d3af8240b549035b710f006, type: 3}
+  - {fileID: 8384338223291309754, guid: bc6301d4f828a7a41a53f8541153901e, type: 3}
+  - {fileID: 8384338223291309754, guid: bc6301d4f828a7a41a53f8541153901e, type: 3}
+  - {fileID: 8384338223291309754, guid: bc6301d4f828a7a41a53f8541153901e, type: 3}
+  _selectStrategy: {fileID: 11400000, guid: 6de166753f5c0814ea49257bf39c5761, type: 2}

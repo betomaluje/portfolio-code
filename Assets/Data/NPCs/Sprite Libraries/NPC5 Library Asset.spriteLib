@@ -1,0 +1,131 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &1
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a5e6fedc2472449cead18ef23b5cb30d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Library:
+  - m_Name: Hair Idle
+    m_Hash: 458578523
+    m_CategoryList: []
+    m_OverrideEntries:
+    - m_Name: idle_strip9_0
+      m_Hash: 518148134
+      m_Sprite: {fileID: 914704801, guid: 27a0542478cd4ca4ebcf8e68f3a14273, type: 3}
+      m_FromMain: 1
+      m_SpriteOverride: {fileID: -2001044531, guid: eb0cf1263e5a97047bdd7561f36ecbfc, type: 3}
+    - m_Name: idle_strip9_1
+      m_Hash: 702898352
+      m_Sprite: {fileID: 954317981, guid: 27a0542478cd4ca4ebcf8e68f3a14273, type: 3}
+      m_FromMain: 1
+      m_SpriteOverride: {fileID: 662487288, guid: eb0cf1263e5a97047bdd7561f36ecbfc, type: 3}
+    - m_Name: idle_strip9_2
+      m_Hash: 820785418
+      m_Sprite: {fileID: -152813528, guid: 27a0542478cd4ca4ebcf8e68f3a14273, type: 3}
+      m_FromMain: 1
+      m_SpriteOverride: {fileID: 442204109, guid: eb0cf1263e5a97047bdd7561f36ecbfc, type: 3}
+    - m_Name: idle_strip9_3
+      m_Hash: 132841884
+      m_Sprite: {fileID: -1759010060, guid: 27a0542478cd4ca4ebcf8e68f3a14273, type: 3}
+      m_FromMain: 1
+      m_SpriteOverride: {fileID: -874922480, guid: eb0cf1263e5a97047bdd7561f36ecbfc, type: 3}
+    - m_Name: idle_strip9_4
+      m_Hash: 428839999
+      m_Sprite: {fileID: 173969149, guid: 27a0542478cd4ca4ebcf8e68f3a14273, type: 3}
+      m_FromMain: 1
+      m_SpriteOverride: {fileID: -1202773363, guid: eb0cf1263e5a97047bdd7561f36ecbfc, type: 3}
+    - m_Name: idle_strip9_5
+      m_Hash: 780706985
+      m_Sprite: {fileID: -1457899186, guid: 27a0542478cd4ca4ebcf8e68f3a14273, type: 3}
+      m_FromMain: 1
+      m_SpriteOverride: {fileID: -1192112992, guid: eb0cf1263e5a97047bdd7561f36ecbfc, type: 3}
+    - m_Name: idle_strip9_6
+      m_Hash: 931263763
+      m_Sprite: {fileID: -1735027873, guid: 27a0542478cd4ca4ebcf8e68f3a14273, type: 3}
+      m_FromMain: 1
+      m_SpriteOverride: {fileID: -1569418348, guid: eb0cf1263e5a97047bdd7561f36ecbfc, type: 3}
+    - m_Name: idle_strip9_7
+      m_Hash: 8832389
+      m_Sprite: {fileID: 1460233213, guid: 27a0542478cd4ca4ebcf8e68f3a14273, type: 3}
+      m_FromMain: 1
+      m_SpriteOverride: {fileID: 1462056796, guid: eb0cf1263e5a97047bdd7561f36ecbfc, type: 3}
+    - m_Name: idle_strip9_8
+      m_Hash: 272226324
+      m_Sprite: {fileID: -2022936439, guid: 27a0542478cd4ca4ebcf8e68f3a14273, type: 3}
+      m_FromMain: 1
+      m_SpriteOverride: {fileID: 2095645903, guid: eb0cf1263e5a97047bdd7561f36ecbfc, type: 3}
+    m_FromMain: 1
+    m_EntryOverrideCount: 9
+  - m_Name: Hair Walk
+    m_Hash: 182490395
+    m_CategoryList: []
+    m_OverrideEntries:
+    - m_Name: walk_strip8_0
+      m_Hash: 397137880
+      m_Sprite: {fileID: 591107654, guid: 5d7c9f76723564947b0e3680383d4df7, type: 3}
+      m_FromMain: 1
+      m_SpriteOverride: {fileID: -532471041, guid: 34ccd62ab0b063749a122193648395f4, type: 3}
+    - m_Name: walk_strip8_1
+      m_Hash: 548202318
+      m_Sprite: {fileID: 1205372918, guid: 5d7c9f76723564947b0e3680383d4df7, type: 3}
+      m_FromMain: 1
+      m_SpriteOverride: {fileID: -2125813619, guid: 34ccd62ab0b063749a122193648395f4, type: 3}
+    - m_Name: walk_strip8_2
+      m_Hash: 967161588
+      m_Sprite: {fileID: -340797306, guid: 5d7c9f76723564947b0e3680383d4df7, type: 3}
+      m_FromMain: 1
+      m_SpriteOverride: {fileID: -394344927, guid: 34ccd62ab0b063749a122193648395f4, type: 3}
+    - m_Name: walk_strip8_3
+      m_Hash: 245532258
+      m_Sprite: {fileID: 626564762, guid: 5d7c9f76723564947b0e3680383d4df7, type: 3}
+      m_FromMain: 1
+      m_SpriteOverride: {fileID: 1972075747, guid: 34ccd62ab0b063749a122193648395f4, type: 3}
+    - m_Name: walk_strip8_4
+      m_Hash: 281416641
+      m_Sprite: {fileID: -555611483, guid: 5d7c9f76723564947b0e3680383d4df7, type: 3}
+      m_FromMain: 1
+      m_SpriteOverride: {fileID: -504116861, guid: 34ccd62ab0b063749a122193648395f4, type: 3}
+    - m_Name: walk_strip8_5
+      m_Hash: 666968919
+      m_Sprite: {fileID: 1644538081, guid: 5d7c9f76723564947b0e3680383d4df7, type: 3}
+      m_FromMain: 1
+      m_SpriteOverride: {fileID: 575428499, guid: 34ccd62ab0b063749a122193648395f4, type: 3}
+    - m_Name: walk_strip8_6
+      m_Hash: 1053324013
+      m_Sprite: {fileID: -393546469, guid: 5d7c9f76723564947b0e3680383d4df7, type: 3}
+      m_FromMain: 1
+      m_SpriteOverride: {fileID: 1742998213, guid: 34ccd62ab0b063749a122193648395f4, type: 3}
+    - m_Name: walk_strip8_7
+      m_Hash: 164577915
+      m_Sprite: {fileID: 270735584, guid: 5d7c9f76723564947b0e3680383d4df7, type: 3}
+      m_FromMain: 1
+      m_SpriteOverride: {fileID: -647165522, guid: 34ccd62ab0b063749a122193648395f4, type: 3}
+    m_FromMain: 1
+    m_EntryOverrideCount: 8
+  - m_Name: Hair Death
+    m_Hash: 916768854
+    m_CategoryList: []
+    m_OverrideEntries:
+    - m_Name: death_strip13_0
+      m_Hash: 946109396
+      m_Sprite: {fileID: -2084478882, guid: a6d3bb93267a8684987b5a17994fc3ed, type: 3}
+      m_FromMain: 1
+      m_SpriteOverride: {fileID: 2065130621, guid: 07cdd257ccbba29459d7dce3e136a4ad, type: 3}
+    - m_Name: death_strip13_1
+      m_Hash: 258165570
+      m_Sprite: {fileID: 499222626, guid: a6d3bb93267a8684987b5a17994fc3ed, type: 3}
+      m_FromMain: 1
+      m_SpriteOverride: {fileID: 1367420357, guid: 07cdd257ccbba29459d7dce3e136a4ad, type: 3}
+    m_FromMain: 1
+    m_EntryOverrideCount: 2
+  m_PrimaryLibraryGUID: bddb802f8f1dff8419cdaff93a89b8b7
+  m_ModificationHash: 638363455718657375
+  m_Version: 1

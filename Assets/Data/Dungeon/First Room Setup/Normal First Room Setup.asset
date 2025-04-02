@@ -1,0 +1,31 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 92cc5097597e7c94283bd1e5ec5466e5, type: 3}
+  m_Name: Normal First Room Setup
+  m_EditorClassIdentifier: 
+  Player: {fileID: 566579863492771119, guid: 86657eceb120c7a4cbd1284431251f41, type: 3}
+  Merchant: {fileID: 0}
+  SpacingBetweenObjects: 1.5
+  SpacingForPlayer: 3
+  Objects: []
+  Powerups:
+    Amount: 1
+    Items: []
+    Prefab: {fileID: 0}
+  Skills:
+    Amount: 1
+    Items: []
+    Prefab: {fileID: 0}
+  WeaponModifiers:
+    Amount: 1
+    Items: []
+    Prefab: {fileID: 0}

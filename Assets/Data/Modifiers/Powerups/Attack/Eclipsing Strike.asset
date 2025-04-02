@@ -1,0 +1,29 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e5734b24dd99d5c4ba18d534c622fa35, type: 3}
+  m_Name: Eclipsing Strike
+  m_EditorClassIdentifier: 
+  ID: 60
+  Name: Eclipsing Strike
+  _statType: 1
+  Description: Gain 35% increased attack power for 8 seconds after hitting 4 enemies
+    at once.
+  Icon: {fileID: 21300000, guid: 6c6b43bf90e74594499d27257457ca0f, type: 3}
+  EndValue: 1.35
+  SaveInPreferences: 0
+  _tagColor: {r: 0.6509804, g: 0.14901961, b: 0.32941177, a: 1}
+  _hasConditions: 1
+  _conditions:
+  - {fileID: 11400000, guid: c0a32a5876b6c014aa6f590b8f76d82b, type: 2}
+  Indefinite: 1
+  Duration: 8
+  Cooldown: 15

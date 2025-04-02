@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 29c00c191b8265244a81a39914c3d810, type: 3}
+  m_Name: Freeze Enemy Modifier
+  m_EditorClassIdentifier: 
+  Name: Freeze Enemy
+  Description: Adds a freezing ability to your current selected weapon. Reduces enemy's
+    speed. This effect lasts 6 seconds.
+  Icon: {fileID: 21300000, guid: 9f37ce88ac1aa1c4193eb008e2079e85, type: 3}
+  EndValue: 0.1
+  _tagColor: {r: 0.8235294, g: 0.6117647, b: 0.5411765, a: 1}
+  Indefinite: 0
+  Duration: 6
+  _particleFX: {fileID: 6810637165268059534, guid: ece36041ca0440241a79224103bf4603, type: 3}

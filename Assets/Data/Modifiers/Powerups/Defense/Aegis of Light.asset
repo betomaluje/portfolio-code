@@ -1,0 +1,29 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ef3d4eab0a172524fb707e6fa3e214e0, type: 3}
+  m_Name: Aegis of Light
+  m_EditorClassIdentifier: 
+  ID: 57
+  Name: Aegis of Light
+  _statType: 2
+  Description: Reduce damage taken by 30% for 4 seconds when health is above 90%.
+  Icon: {fileID: 21300000, guid: 8faca8016ff1e314bb8c1047fb7b3066, type: 3}
+  EndValue: 0.7
+  SaveInPreferences: 0
+  _tagColor: {r: 0.6509804, g: 0.14901961, b: 0.32941177, a: 1}
+  _hasConditions: 1
+  _conditions:
+  - {fileID: 11400000, guid: 4b98fa373eadf09408b6fd3a3899d4d9, type: 2}
+  Indefinite: 1
+  Duration: 4
+  Cooldown: 15
+  _prefabEquipped: {fileID: 0}

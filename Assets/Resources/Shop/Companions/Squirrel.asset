@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a228b53078c7894abb3172e14a425c9, type: 3}
+  m_Name: Squirrel
+  m_EditorClassIdentifier: 
+  Name: Squirrel
+  ItemType: 3
+  Cost: 1500
+  Item: {fileID: 11400000, guid: eb7ccae50ad36b14b874e55c6f6dca12, type: 2}
+  Icon: {fileID: 7579966246130621718, guid: 4f377ad7b38bb2445b6239bad313e9d3, type: 3}

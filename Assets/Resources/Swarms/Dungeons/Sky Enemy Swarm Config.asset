@@ -1,0 +1,50 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: de0ff43bd9564847b258c447871b1cc2, type: 3}
+  m_Name: Sky Enemy Swarm Config
+  m_EditorClassIdentifier: 
+  AmountToSpawn: 8
+  Prefabs:
+  - _item: {fileID: 3281555347599893051, guid: 659908699d6ce1e42a5c8aa0fbc59209, type: 3}
+    _weight: 2
+  - _item: {fileID: 2546244678098844699, guid: 52ae3efd2ad1cae4091f0d4a1c4b4cb5, type: 3}
+    _weight: 2
+  - _item: {fileID: 4572191578540797369, guid: f82453b7c5677a5478eb310d987af61b, type: 3}
+    _weight: 2
+  - _item: {fileID: 2833063374052428694, guid: 37aa1d7d26940574995b9364d6eb3558, type: 3}
+    _weight: 2
+  - _item: {fileID: 1438139141039937257, guid: e84421cb264337843b49c9018fb751c6, type: 3}
+    _weight: 2
+  - _item: {fileID: 6520390357087853637, guid: dff921c550ff820449632e20224f4765, type: 3}
+    _weight: 2
+  - _item: {fileID: 9167048828174881698, guid: 489802b8c72f82d4fa595138bc320e75, type: 3}
+    _weight: 2
+  - _item: {fileID: 5917214457574887837, guid: 256db5be51f41dd49bf90de365865eb8, type: 3}
+    _weight: 2
+  - _item: {fileID: 5583302782985697512, guid: b6821e44f423d354fa10c15aa7d1a3ef, type: 3}
+    _weight: 2
+  - _item: {fileID: 8441183481709015999, guid: 8bd229ac05abcc94fa7021e50a546bea, type: 3}
+    _weight: 2
+  - _item: {fileID: 332554412513043621, guid: 41329d10a1452474a979a91bb0fb498e, type: 3}
+    _weight: 2
+  - _item: {fileID: 8892874182124014881, guid: 281d2193d3e33614db63464bf65c26a1, type: 3}
+    _weight: 3
+  - _item: {fileID: 4655609050929569016, guid: da86d9eb99d96b34f9d074de8b17a881, type: 3}
+    _weight: 3
+  - _item: {fileID: 7763414739359738183, guid: 86cfe4ed16fb1544b94bfbb3882c21f8, type: 3}
+    _weight: 2
+  - _item: {fileID: 6955442147100808425, guid: 398e259e8756ed54781bd85098d5cbc5, type: 3}
+    _weight: 2
+  AmountOfWaves: 1
+  AppearFxPrefab: {fileID: 1075223873430501751, guid: 79f63cb85efa0124bbbd104e2e0c0ce3, type: 3}
+  TimeForSpawnEnemy: 1.5
+  FxRotation: {x: -40, y: 0, z: 0}

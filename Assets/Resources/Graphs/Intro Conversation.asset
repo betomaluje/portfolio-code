@@ -1,0 +1,65 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a2ef5589ae749c6b7f83e5b11c4de96, type: 3}
+  m_Name: Intro Conversation
+  m_EditorClassIdentifier: 
+  NodeLinks:
+  - BaseNodeGuid: 590d54c7-e892-4d8c-854b-b6bdbfa94ead
+    PortName: Next
+    TargetNodeGuid: 5a313e45-17ba-4866-ac05-01a10576bbd4
+  - BaseNodeGuid: 5a313e45-17ba-4866-ac05-01a10576bbd4
+    PortName: Next Dialog
+    TargetNodeGuid: 223f8bce-b79a-45de-bae0-5d660edc9d10
+  - BaseNodeGuid: 223f8bce-b79a-45de-bae0-5d660edc9d10
+    PortName: Next Dialog
+    TargetNodeGuid: c9e46c86-aa81-444d-b824-d713df0775d4
+  - BaseNodeGuid: c9e46c86-aa81-444d-b824-d713df0775d4
+    PortName: Next Dialog
+    TargetNodeGuid: 59c0eaa8-a0c2-4448-827f-1a8c0e11c0f0
+  DialogNodes:
+  - Guid: 5a313e45-17ba-4866-ac05-01a10576bbd4
+    Content:
+      characterID: 4378aceb-4f02-482b-91e3-bb587d3cfb92
+      emotion: 2
+      DialogText: OMG! Thanks for coming to my rescue! I've been trap here for so
+        long!
+    Position: {x: 230, y: 162}
+    Type: 1
+    Choices:
+    - Next Dialog
+  - Guid: 223f8bce-b79a-45de-bae0-5d660edc9d10
+    Content:
+      characterID: 4378aceb-4f02-482b-91e3-bb587d3cfb92
+      emotion: 0
+      DialogText: There are some evil creatures here so be careful!
+    Position: {x: 541, y: 162}
+    Type: 1
+    Choices:
+    - Next Dialog
+  - Guid: c9e46c86-aa81-444d-b824-d713df0775d4
+    Content:
+      characterID: 4378aceb-4f02-482b-91e3-bb587d3cfb92
+      emotion: 0
+      DialogText: You need to defeat them all if we want to get out of here...
+    Position: {x: 904, y: 173}
+    Type: 1
+    Choices:
+    - Next Dialog
+  - Guid: 59c0eaa8-a0c2-4448-827f-1a8c0e11c0f0
+    Content:
+      characterID: 4378aceb-4f02-482b-91e3-bb587d3cfb92
+      emotion: 0
+      DialogText: I'll follow you!
+    Position: {x: 1239, y: 173}
+    Type: 1
+    Choices:
+    - Next Dialog

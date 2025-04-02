@@ -1,0 +1,17 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8385b4d8cc8062a40af00741236857f8, type: 3}
+  m_Name: Boss 2 Charge Towards Target
+  m_EditorClassIdentifier: 
+  _movementConfig: {fileID: 11400000, guid: 5808999bb680b3e458a18e79f87fcd79, type: 2}
+  _predictionConfig: {fileID: 11400000, guid: 019871b28420bc64abc9c03f6af4aa2a, type: 2}
+  _debug: 0

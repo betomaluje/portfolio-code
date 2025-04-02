@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e6167b6ffa673274c9466175dbf2170c, type: 3}
+  m_Name: Stage 1
+  m_EditorClassIdentifier: 
+  HealthBarColor: {r: 0.4117647, g: 0.6509804, b: 0.03529412, a: 1}
+  PercentageToActivate: 1
+  States: []
+  Weapons:
+  - {fileID: 11400000, guid: 7fb9bc5d0fb814a4781ac0c7f74333fb, type: 2}
+  - {fileID: 11400000, guid: 00ec9b3a14e1e5645b13980ab685da76, type: 2}
+  - {fileID: 11400000, guid: 7908339365980bb488b1441fd622c137, type: 2}

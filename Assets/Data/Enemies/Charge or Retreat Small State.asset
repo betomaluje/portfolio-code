@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa351e65d7e1ba34db0c8fd581ec8e21, type: 3}
+  m_Name: Charge or Retreat Small State
+  m_EditorClassIdentifier: 
+  _states:
+  - _item: {fileID: 11400000, guid: 3e4d8233190ae9044bbad255d8f36143, type: 2}
+    _weight: 3
+  - _item: {fileID: 11400000, guid: 05a922838b79f144d803cc8ce06880f5, type: 2}
+    _weight: 1
+  - _item: {fileID: 11400000, guid: a98ad3361d7998849be335e4db60bb8f, type: 2}
+    _weight: 2
+  _delay: 0
+  _seed: -1

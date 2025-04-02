@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1ecb4dacbdbf80a4aaee4a3d767bce90, type: 3}
+  m_Name: Summoner Magic 1
+  m_EditorClassIdentifier: 
+  Name: Summoner Magic
+  Damage: 6
+  KnockbackForce: 500
+  AttackCooldown: 0.8
+  AttackAnimation: Attack
+  PrefabNameToEnable: 
+  AttackType: 4
+  Range: 6
+  MaskWeaponSize: 1.8
+  MaxAmmo: 3
+  ReloadAnimation: 
+  BulletPrefab: {fileID: 3652421666567172349, guid: 5f587acf9baea8c4c914be977ec7384b, type: 3}

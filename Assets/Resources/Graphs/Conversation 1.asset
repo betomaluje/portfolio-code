@@ -1,0 +1,77 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a2ef5589ae749c6b7f83e5b11c4de96, type: 3}
+  m_Name: Conversation 1
+  m_EditorClassIdentifier: 
+  NodeLinks:
+  - BaseNodeGuid: 37fa0021-10ea-452d-86f8-0388e1f1e7d1
+    PortName: Next
+    TargetNodeGuid: 1f1436f4-77ab-43fb-ac70-bf5f056b1951
+  - BaseNodeGuid: 5f5dcf1a-9fad-4aa2-b961-86138bb5dfae
+    PortName: Next Dialog
+    TargetNodeGuid: 462d955a-11f7-4bda-bb64-f81c6b257dcb
+  - BaseNodeGuid: 462d955a-11f7-4bda-bb64-f81c6b257dcb
+    PortName: Yes
+    TargetNodeGuid: 23480288-216c-48ef-a6d8-b30b46a096bb
+  - BaseNodeGuid: 462d955a-11f7-4bda-bb64-f81c6b257dcb
+    PortName: No
+    TargetNodeGuid: 39c2b913-5061-4f40-9efa-77ada591c4b6
+  - BaseNodeGuid: 1f1436f4-77ab-43fb-ac70-bf5f056b1951
+    PortName: Next Dialog
+    TargetNodeGuid: 5f5dcf1a-9fad-4aa2-b961-86138bb5dfae
+  DialogNodes:
+  - Guid: 1f1436f4-77ab-43fb-ac70-bf5f056b1951
+    Content:
+      characterID: e3b85ac9-7939-4d44-86c5-7a9d1766c333
+      emotion: 0
+      DialogText: Hi I'm Faroz. I used to be a Blacksmith.
+    Position: {x: 232, y: 119.2}
+    Type: 1
+    Choices:
+    - Next Dialog
+  - Guid: 462d955a-11f7-4bda-bb64-f81c6b257dcb
+    Content:
+      characterID: e3b85ac9-7939-4d44-86c5-7a9d1766c333
+      emotion: 0
+      DialogText: Rescue me?
+    Position: {x: 896.8, y: 72}
+    Type: 2
+    Choices:
+    - Yes
+    - No
+  - Guid: 23480288-216c-48ef-a6d8-b30b46a096bb
+    Content:
+      characterID: e3b85ac9-7939-4d44-86c5-7a9d1766c333
+      emotion: 0
+      DialogText: Come with me
+    Position: {x: 1343.2, y: -41.6}
+    Type: 1
+    Choices:
+    - Next Dialog
+  - Guid: 39c2b913-5061-4f40-9efa-77ada591c4b6
+    Content:
+      characterID: e3b85ac9-7939-4d44-86c5-7a9d1766c333
+      emotion: 0
+      DialogText: I need to go now
+    Position: {x: 1343.2, y: 234.4}
+    Type: 1
+    Choices:
+    - Next Dialog
+  - Guid: 5f5dcf1a-9fad-4aa2-b961-86138bb5dfae
+    Content:
+      characterID: e3b85ac9-7939-4d44-86c5-7a9d1766c333
+      emotion: 0
+      DialogText: Thanks to this creatures I had to run the village
+    Position: {x: 560, y: 119.2}
+    Type: 1
+    Choices:
+    - Next Dialog

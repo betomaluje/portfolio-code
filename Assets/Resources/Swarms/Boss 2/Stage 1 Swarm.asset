@@ -1,0 +1,38 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: de0ff43bd9564847b258c447871b1cc2, type: 3}
+  m_Name: Stage 1 Swarm
+  m_EditorClassIdentifier: 
+  AmountToSpawn: 4
+  Prefabs:
+  - _item: {fileID: 3281555347599893051, guid: 659908699d6ce1e42a5c8aa0fbc59209, type: 3}
+    _weight: 2
+  - _item: {fileID: 2833063374052428694, guid: 37aa1d7d26940574995b9364d6eb3558, type: 3}
+    _weight: 2
+  - _item: {fileID: 6520390357087853637, guid: dff921c550ff820449632e20224f4765, type: 3}
+    _weight: 2
+  - _item: {fileID: 5152313659154975908, guid: b46f3c46b21cdfc49afc34b6580c0137, type: 3}
+    _weight: 2
+  - _item: {fileID: 8441183481709015999, guid: 8bd229ac05abcc94fa7021e50a546bea, type: 3}
+    _weight: 2
+  - _item: {fileID: 1438139141039937257, guid: e84421cb264337843b49c9018fb751c6, type: 3}
+    _weight: 2
+  - _item: {fileID: 1083933256756895921, guid: 8333042b3c8a5b541a983f99068cf70a, type: 3}
+    _weight: 3
+  - _item: {fileID: 4655609050929569016, guid: da86d9eb99d96b34f9d074de8b17a881, type: 3}
+    _weight: 2
+  - _item: {fileID: 6340713471808056285, guid: 63ef873b1208cae43a482d1b50551b9c, type: 3}
+    _weight: 2
+  AmountOfWaves: 2
+  AppearFxPrefab: {fileID: 1075223873430501751, guid: 79f63cb85efa0124bbbd104e2e0c0ce3, type: 3}
+  TimeForSpawnEnemy: 1.5
+  FxRotation: {x: -40, y: 0, z: 0}

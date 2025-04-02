@@ -1,0 +1,37 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8609f2b485817b4418694fbd4bc62aa0, type: 3}
+  m_Name: Echo of the Fallen
+  m_EditorClassIdentifier: 
+  ID: 4
+  Name: Echo of the Fallen
+  SkillType: 4
+  Description: Summon a weaker copy of yourself to draw the attention of enemies,
+    distracting them in battle.
+  Icon: {fileID: 21300000, guid: ce821611184bb004fadde6b405d30c22, type: 2}
+  EndValue: 0
+  Duration: 15
+  OneTime: 0
+  _tagColor: {r: 0.49803922, g: 0.827451, b: 0.9019608, a: 1}
+  _hasConditions: 0
+  _conditions: []
+  _spawnTransform: {fileID: 5366768505652771422, guid: a2ff5e0959929af4789f080e77fa21a1, type: 3}
+  _blockMask:
+    serializedVersion: 2
+    m_Bits: 16
+  _amount: 6
+  _startAngle: 0
+  _angle: 60
+  _distanceFromOrigin: 3
+  _timeBetweenSpawns: 0.1
+  _spawnBehindPlayer: 0
+  _destroyOnDeactivate: 0

@@ -1,0 +1,16 @@
+{
+    "name": "com.berserkpixel.prata",
+    "rootNamespace": "",
+    "references": [
+        "com.berserkpixel.prata.core"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

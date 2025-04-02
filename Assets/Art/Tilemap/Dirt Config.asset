@@ -1,0 +1,44 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b241e75e3f4e4ea1a55a3c44797c27b7, type: 3}
+  m_Name: Dirt Config
+  m_EditorClassIdentifier: 
+  _sprites:
+  - Sprite: {fileID: -412495544, guid: 170e2b1bdc9e41145ab21c4346ff187d, type: 3}
+    Weight: 0
+  - Sprite: {fileID: 794235229, guid: 170e2b1bdc9e41145ab21c4346ff187d, type: 3}
+    Weight: 0
+  - Sprite: {fileID: 1891142376, guid: 170e2b1bdc9e41145ab21c4346ff187d, type: 3}
+    Weight: 0
+  - Sprite: {fileID: -175699699, guid: 170e2b1bdc9e41145ab21c4346ff187d, type: 3}
+    Weight: 0
+  - Sprite: {fileID: -121894786, guid: 170e2b1bdc9e41145ab21c4346ff187d, type: 3}
+    Weight: 0
+  - Sprite: {fileID: 1901878702, guid: 170e2b1bdc9e41145ab21c4346ff187d, type: 3}
+    Weight: 0
+  - Sprite: {fileID: 840451979, guid: 170e2b1bdc9e41145ab21c4346ff187d, type: 3}
+    Weight: 0
+  - Sprite: {fileID: 2029757216, guid: 170e2b1bdc9e41145ab21c4346ff187d, type: 3}
+    Weight: 0
+  - Sprite: {fileID: 169542607, guid: 170e2b1bdc9e41145ab21c4346ff187d, type: 3}
+    Weight: 0
+  - Sprite: {fileID: 352052793, guid: 170e2b1bdc9e41145ab21c4346ff187d, type: 3}
+    Weight: 0
+  - Sprite: {fileID: 250053643, guid: 170e2b1bdc9e41145ab21c4346ff187d, type: 3}
+    Weight: 0
+  - Sprite: {fileID: 2075998446, guid: 170e2b1bdc9e41145ab21c4346ff187d, type: 3}
+    Weight: 0
+  - Sprite: {fileID: 778434453, guid: 170e2b1bdc9e41145ab21c4346ff187d, type: 3}
+    Weight: 0
+  - Sprite: {fileID: 778434453, guid: 170e2b1bdc9e41145ab21c4346ff187d, type: 3}
+    Weight: 0
+  seed: 

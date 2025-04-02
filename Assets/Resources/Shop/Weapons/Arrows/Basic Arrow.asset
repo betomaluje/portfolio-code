@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b577c9a3c8fb97e4ca844f2d64f2ac94, type: 3}
+  m_Name: Basic Arrow
+  m_EditorClassIdentifier: 
+  Name: Basic Arrow
+  ItemType: 0
+  Cost: 700
+  Item: {fileID: 11400000, guid: 012d32e8bd8ff0b43a05fd8e9823b6c8, type: 2}
+  Icon: {fileID: -765150924802650856, guid: 59b20e8ab189c2f41843a3ff511aefe8, type: 3}

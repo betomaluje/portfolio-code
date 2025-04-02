@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e61191f583c112449af8e531b0708f3a, type: 3}
+  m_Name: Boomerang
+  m_EditorClassIdentifier: 
+  Name: Boomerang
+  Damage: 8
+  KnockbackForce: 350
+  AttackCooldown: 0.8
+  AttackAnimation: Attack
+  PrefabNameToEnable: Custom/Throwables/Boomerang
+  AttackType: 6
+  Range: 5
+  MaskWeaponSize: 1.8
+  _projectilePrefab: {fileID: 1820415865025951612, guid: fba3c469a43019743ad1005105d63b0e, type: 3}
+  _path: {fileID: 11400000, guid: f70fbf4860738944fbde40ec0dbaa264, type: 2}
+  ChargeTime: 3

@@ -1,0 +1,16 @@
+{
+    "name": "com.berserkpixel.statemachine",
+    "rootNamespace": "",
+    "references": [
+        "GUID:26ed3fb2abbb6401aaeb82816a7a7e2d"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

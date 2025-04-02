@@ -1,0 +1,29 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e7a7da3dfd7460042ab521015f272959, type: 3}
+  m_Name: Shattered Resolve
+  m_EditorClassIdentifier: 
+  ID: 68
+  Name: Shattered Resolve
+  _statType: 0
+  Description: Increase speed by 30% for 10 seconds after losing 15% health in a
+    single hit.
+  Icon: {fileID: 21300000, guid: 9e7f0c82de1377e458a497e92167592b, type: 3}
+  EndValue: 1.3
+  SaveInPreferences: 0
+  _tagColor: {r: 0.6509804, g: 0.14901961, b: 0.32941177, a: 1}
+  _hasConditions: 1
+  _conditions:
+  - {fileID: 11400000, guid: dddf0f3f303679d47b5527a6e405aa03, type: 2}
+  Indefinite: 1
+  Duration: 10
+  Cooldown: 20

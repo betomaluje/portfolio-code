@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 196119687c6b93e49a6fc62d5b2cb0fd, type: 3}
+  m_Name: Restoration Light
+  m_EditorClassIdentifier: 
+  ID: 2
+  Name: Restoration Light
+  SkillType: 0
+  Description: Heal the target by 2 HP per second for 5 seconds, renewing their strength.
+  Icon: {fileID: 21300000, guid: c75372f9fc2571743b77ba3ca25d7e86, type: 2}
+  EndValue: 2
+  Duration: 5
+  OneTime: 0
+  _tagColor: {r: 0.49803922, g: 0.827451, b: 0.9019608, a: 1}
+  _hasConditions: 0
+  _conditions: []
+  _interval: 1

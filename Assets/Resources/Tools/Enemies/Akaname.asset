@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3a1d00c49566e2540a6315f5d2bf7d9a, type: 3}
+  m_Name: Akaname
+  m_EditorClassIdentifier: 
+  ID: b5e8e4c6-c5e9-4533-9dba-1a89e6c784e3
+  Type: 0
+  Prefab: {fileID: 8700588717779744760, guid: 214b26eb00a8c7f4aa427e08f042ca53, type: 3}
+  EditorPrefab: {fileID: 8700588717779744760, guid: 214b26eb00a8c7f4aa427e08f042ca53, type: 3}
+  MockPrefab: {fileID: 7989016403761500805, guid: e5f0cd4d9ce54ec42bfc6bb88dddbd4b, type: 3}
+  OnlyCopy: 0
+  UIScale: 1

@@ -1,0 +1,55 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 92cc5097597e7c94283bd1e5ec5466e5, type: 3}
+  m_Name: TEST First Room w Items
+  m_EditorClassIdentifier: 
+  Player: {fileID: 566579863492771119, guid: 86657eceb120c7a4cbd1284431251f41, type: 3}
+  Merchant: {fileID: 4811685652472269212, guid: b2621b0de80335444a8e7743ee03f7fc, type: 3}
+  SpacingBetweenObjects: 2
+  SpacingForPlayer: 2
+  Objects: []
+  Powerups:
+    Amount: 0
+    Items:
+    - {fileID: 11400000, guid: cc9dbf9996677034cb50c6cd529c9c46, type: 2}
+    - {fileID: 11400000, guid: 1793e75cbb4f1f94e98a229a7f2ba5fe, type: 2}
+    - {fileID: 11400000, guid: 40b91c15a2a02874591edda1ddcaf183, type: 2}
+    - {fileID: 11400000, guid: 79ff26738e6153448a5c558a54040886, type: 2}
+    - {fileID: 11400000, guid: 79af2e67f74f7344ab08a4f5746f1864, type: 2}
+    - {fileID: 11400000, guid: 1403adeb1bfb62a488c788813a6c9735, type: 2}
+    - {fileID: 11400000, guid: f96ae8d4fb1b0944e8beaa35f1cb712b, type: 2}
+    - {fileID: 11400000, guid: 72a5ef08eb9bb96498343ced529c760e, type: 2}
+    - {fileID: 11400000, guid: 6fc16a63971f35d45b20d9090b118a41, type: 2}
+    - {fileID: 11400000, guid: 9c7068260e9aa344b9aaa94ad3ba8a91, type: 2}
+    - {fileID: 11400000, guid: 63fe4266a5df83b40ac9730d71bb487c, type: 2}
+    - {fileID: 11400000, guid: b99fd054a8a636041a21da258e6d7888, type: 2}
+    - {fileID: 11400000, guid: 44112782cdd7b674b85be4ebfdda563d, type: 2}
+    - {fileID: 11400000, guid: db238210abcb7bf4783f291835466d0e, type: 2}
+    - {fileID: 11400000, guid: b939cdea78f419b49b4607aec3f24306, type: 2}
+    Prefab: {fileID: 2293729896304752297, guid: 72fd19311bc9edb4eb07084690ffef32, type: 3}
+  Skills:
+    Amount: 3
+    Items:
+    - {fileID: 11400000, guid: 3665765b340c3ba4d85b5e2db8086a94, type: 2}
+    - {fileID: 11400000, guid: 1bfddb74fcb486b419eada118aba4030, type: 2}
+    - {fileID: 11400000, guid: cb049ce7d2e9379408f224ca3dcc688c, type: 2}
+    - {fileID: 11400000, guid: 0c3c9fe1bf7f98e4b80e56c9fdce3957, type: 2}
+    - {fileID: 11400000, guid: a01e0199a70348845a491544ac281986, type: 2}
+    - {fileID: 11400000, guid: e5bb2639d6398cd44833b45a85b4a980, type: 2}
+    - {fileID: 11400000, guid: 442ed08ba51454541ab75bb6c09d41c6, type: 2}
+    Prefab: {fileID: 6370393037102602903, guid: 5cbe454de034609478c8e165e48417b6, type: 3}
+  WeaponModifiers:
+    Amount: 0
+    Items:
+    - {fileID: 11400000, guid: 1b449c952e434be408b9151db45cf7a0, type: 2}
+    - {fileID: 11400000, guid: 9a216481bf03f314c9ab7ad8173a607e, type: 2}
+    Prefab: {fileID: 1423441166448729174, guid: 1010d713f8a8ce54c957d6d5cfacec06, type: 3}

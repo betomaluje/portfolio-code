@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3a1d00c49566e2540a6315f5d2bf7d9a, type: 3}
+  m_Name: Tree 1
+  m_EditorClassIdentifier: 
+  ID: 46f3e57e-3c74-4ecf-8545-6f8b3b2f3424
+  Type: 1
+  Prefab: {fileID: 3889769415464354066, guid: f096e6e96b570d14493c10242900fd55, type: 3}
+  EditorPrefab: {fileID: 3889769415464354066, guid: f096e6e96b570d14493c10242900fd55, type: 3}
+  MockPrefab: {fileID: 3889769415464354066, guid: 1c19edb796ea4cd448f39934b5482c36, type: 3}
+  OnlyCopy: 0
+  UIScale: 1
