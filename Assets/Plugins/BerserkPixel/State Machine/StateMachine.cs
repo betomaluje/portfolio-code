@@ -8,47 +8,44 @@ using UnityEngine;
 
 namespace BerserkPixel.StateMachine {
     public abstract class StateMachine<T> : MonoBehaviour, IStateAnimationTrigger where T : MonoBehaviour {
+        [Searchable]
         [SerializeField]
         protected List<State<T>> _states;
 
         [BoxGroup("Debug", order: 100)]
         [SerializeField]
-        private bool _displayActiveState = false;
+        protected bool _displayActiveState = false;
 
         [BoxGroup("Debug", order: 100)]
         [ShowIf("_displayActiveState")]
         [SerializeField]
-        private int _maxStatePrints = 3;
+        protected int _maxStatePrints = 1;
 
         [BoxGroup("Debug", order: 100)]
         [SerializeField]
         [Min(12)]
         [ShowIf("_displayActiveState")]
-        private int _fontSize = 20;
+        protected int _fontSize = 14;
 
         [BoxGroup("Debug", order: 100)]
         [SerializeField]
         [ShowIf("_displayActiveState")]
-        private float _marginHorizontal = 0;
-
-        [BoxGroup("Debug", order: 100)]
-        [SerializeField]
-        [ShowIf("_displayActiveState")]
-        private float _marginVertical = 100;
+        protected float _offsetY = .5f;
 
         [BoxGroup("Debug", order: 100)]
         [SerializeField]
         [ShowIf("_displayActiveState")]
         [Tooltip("Padding for the version label. X is horizontal padding, Y is vertical padding.")]
-        private Vector2Int _padding = new(10, 6);
+        protected Vector2Int _padding = new(10, 0);
 
         public Type CurrentState => _activeState != null ? _activeState.GetType() : default;
+        public State<T> ActiveState => _activeState;
 
-        private State<T> _activeState;
+        protected State<T> _activeState;
 
         private T _parent;
 
-        private Queue<string> _debugStates;
+        protected Queue<string> _debugStates;
 
         protected virtual void Awake() {
             _parent = GetComponent<T>();
@@ -146,9 +143,20 @@ namespace BerserkPixel.StateMachine {
         }
 
         public void AddState(State<T> newState) {
-            if (!_states.Contains(newState)) {
-                _states.Add(newState);
+            var newList = _states != null ? new List<State<T>>(_states) : new List<State<T>>();
+            
+            if (!newList.Contains(newState)) {
+                newList.Add(newState);
+                _states = newList;
             }
+        }
+
+        public void ClearStates() {
+            if (_activeState != null) {
+                _activeState.Exit();
+                _activeState = null;
+            }
+            _states.Clear();
         }
 
         public bool HasState(Type newStateType) => _states.Any(s => s.GetType() == newStateType);
@@ -162,7 +170,7 @@ namespace BerserkPixel.StateMachine {
             _activeState?.AnimationTriggerEvent(triggerType);
         }
 
-        private void OnGUI() {
+        protected virtual void OnGUI() {
             if (!_displayActiveState) {
                 return;
             }
@@ -174,13 +182,21 @@ namespace BerserkPixel.StateMachine {
             }
 
             GUIStyle boxStyle = new(GUI.skin.box);
-            boxStyle.normal.textColor = Color.black;
-            boxStyle.hover.textColor = Color.black;
+            boxStyle.normal.textColor = Color.white;
+            boxStyle.hover.textColor = Color.white;
             boxStyle.fontSize = _fontSize;
 
             var boxContent = new GUIContent($"{stringBuilder}");
             var size = boxStyle.CalcSize(boxContent);
-            var position = new Rect(_marginHorizontal, Screen.height - _marginVertical, size.x + _padding.x, size.y + _padding.y);
+
+            Vector2 worldPos = Camera.main.WorldToScreenPoint(transform.position + Vector3.up * _offsetY);
+
+            Rect position = new(
+                worldPos.x - size.x / 2f,
+                Screen.height - worldPos.y - size.y, // Y-axis flipped and adjusted to sit above
+                size.x + _padding.x,
+                size.y + _padding.y
+            );
 
             GUI.Box(position, boxContent, boxStyle);
         }

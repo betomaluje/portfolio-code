@@ -1,6 +1,7 @@
-using System;
 using Cysharp.Threading.Tasks;
+using Preferences;
 using Sirenix.OdinInspector;
+using System;
 using UnityEngine;
 
 namespace BerserkPixel.Health.FX {

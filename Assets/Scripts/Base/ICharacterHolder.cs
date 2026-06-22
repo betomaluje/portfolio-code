@@ -10,5 +10,7 @@ namespace Base {
         public IWeaponManager WeaponManager { get; }
 
         public IHealth Health { get; }
+
+        public IHealthSetup HealthSetup { get; }
     }
 }

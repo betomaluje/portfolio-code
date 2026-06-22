@@ -1,16 +1,16 @@
-using UnityEngine;
-using UnityEditor;
-using System.Collections.Generic;
 using System;
-using UnityEditor.Callbacks;
+using System.Collections.Generic;
 using System.Linq;
+using UnityEditor;
+using UnityEditor.Callbacks;
+using UnityEngine;
 
 namespace BerserkPixel.Health.FX {
     [ExecuteInEditMode]
     [CustomEditor(typeof(HealthFXController))]
     public class HealthFXControllerEditor : UnityEditor.Editor {
 
-        private static List<Type> _enemyFXs = new(){
+        private List<Type> _enemyFXs = new(){
             typeof(BloodParticlesFX),
             typeof(EnemyBlockFX),
             typeof(FlashFX),
@@ -20,6 +20,11 @@ namespace BerserkPixel.Health.FX {
         };
 
         private static List<Type> _allFxTypes = new();
+        
+        [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.SubsystemRegistration)]
+        private static void ResetStatic() {
+            _allFxTypes = new();
+        }
 
         public override void OnInspectorGUI() {
             base.OnInspectorGUI();

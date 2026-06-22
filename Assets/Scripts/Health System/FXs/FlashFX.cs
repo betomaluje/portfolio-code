@@ -21,10 +21,8 @@ namespace BerserkPixel.Health.FX {
         private int numberOfFlashes = 2;
 
         private readonly int _property = Shader.PropertyToID("_HitEffectBlend");
-
-        // The material that was in use, when the script started.
-        // private Material[] _originalMaterial;
         private readonly Dictionary<Renderer, Material> _originalMaterials = new();
+        private readonly Dictionary<Renderer, Material> _flashMaterials = new();
 
         public FXType GetFXType() => FXType.OnlyNotImmune;
 
@@ -47,28 +45,39 @@ namespace BerserkPixel.Health.FX {
         }
 
         private void Start() {
-            // _originalMaterial = new Material[rend.Length];
-            UpdateOriginalMaterials();
+            CreateAndBackupMaterials();
         }
 
-        private void UpdateOriginalMaterials() {
-            // for (var i = 0; i < rend.Length; i++) {
-            //     _originalMaterial[i] = rend[i].material;
-            // }
+        private void CreateAndBackupMaterials() {
             foreach (var renderer in rend) {
                 if (renderer == null)
                     continue;
 
-                if (_originalMaterials.ContainsKey(renderer)) {
-                    _originalMaterials[renderer] = renderer.material;
-                }
-                else {
-                    _originalMaterials.Add(renderer, renderer.material);
-                }
+                // backup materials to originals
+                _originalMaterials[renderer] = renderer.material;
+
+                // we create a new material to avoid modifying the original material
+                var newFlashMat = new Material(flashMaterial);
+                _flashMaterials[renderer] = newFlashMat;
             }
         }
 
+        private void CleanupFlashMaterials() {
+            foreach (var mat in _flashMaterials.Values) {
+                if (mat != null) {
+                    if (Application.isPlaying) {
+                        Destroy(mat);
+                    }
+                    else {
+                        DestroyImmediate(mat);
+                    }
+                }
+            }
+            _flashMaterials.Clear();
+        }
+
         private void OnDestroy() {
+            CleanupFlashMaterials();
             SetOriginalMaterials();
         }
 
@@ -77,43 +86,55 @@ namespace BerserkPixel.Health.FX {
             FlashRoutine();
         }
 
+        private void SwapMaterials(bool isFlashing) {
+            foreach (var renderer in rend) {
+                if (renderer == null)
+                    continue;
+
+                renderer.material = isFlashing ? _flashMaterials[renderer] : _originalMaterials[renderer];
+            }
+        }
+
         private async void FlashRoutine() {
             var durationPerFlash = duration / numberOfFlashes;
             // we divide by 2 since we need to turn to flash and back to original with a pause
             int waitingTime = (int)(durationPerFlash / 2 * 1000);
 
-            UpdateOriginalMaterials();
-            SetFlashMaterials();
+            SwapMaterials(true);
 
-            for (var i = 0; i < numberOfFlashes; i++) {
-                try {
-                    // Swap to the flashMaterial.
-                    flashMaterial.SetFloat(_property, 1);
+            try {
+                for (var i = 0; i < numberOfFlashes; i++) {
+                    // Enable flash
+                    foreach (var mat in _flashMaterials.Values) {
+                        if (mat.HasProperty(_property))
+                            mat.SetFloat(_property, 1);
+                    }
 
                     await UniTask.Delay(waitingTime, cancellationToken: cancellationToken);
 
-                    // After the pause, swap back to the original material.
-                    flashMaterial.SetFloat(_property, 0);
+                    // Disable flash
+                    foreach (var mat in _flashMaterials.Values) {
+                        if (mat.HasProperty(_property))
+                            mat.SetFloat(_property, 0);
+                    }
 
                     // so we show the original material for the same amount of time
                     await UniTask.Delay(waitingTime, cancellationToken: cancellationToken);
                 }
-                catch (OperationCanceledException) { }
             }
-
-            try {
-                SetOriginalMaterials();
+            catch (OperationCanceledException) { }
+            finally {
+                try {
+                    SwapMaterials(false);
+                }
+                catch (MissingReferenceException) { }
             }
-            catch (MissingReferenceException) { }
         }
 
         private void SetOriginalMaterials() {
             if (rend == null || rend.Length == 0)
                 return;
 
-            // for (var i = 0; i < rend.Length; i++) {
-            //     rend[i].material = _originalMaterial[i];
-            // }
             foreach (var renderer in rend) {
                 if (renderer == null)
                     continue;
@@ -121,15 +142,6 @@ namespace BerserkPixel.Health.FX {
                 if (_originalMaterials.TryGetValue(renderer, out var material)) {
                     renderer.material = material;
                 }
-            }
-        }
-
-        private void SetFlashMaterials() {
-            if (rend == null || rend.Length == 0)
-                return;
-
-            for (var i = 0; i < rend.Length; i++) {
-                rend[i].material = flashMaterial;
             }
         }
     }

@@ -2,11 +2,14 @@
 using UnityEngine;
 using Object = UnityEngine.Object;
 
-namespace BerserkPixel.StateMachine {
-    public abstract class State<T> : ScriptableObject where T : MonoBehaviour {
+namespace BerserkPixel.StateMachine
+{
+    public abstract class State<T> : ScriptableObject where T : MonoBehaviour
+    {
         protected T _machine;
 
-        public virtual void Enter(T parent) {
+        public virtual void Enter(T parent)
+        {
             _machine = parent;
         }
 
@@ -18,24 +21,28 @@ namespace BerserkPixel.StateMachine {
 
         public virtual void Exit() { }
 
-        public override string ToString() {
+        public override string ToString()
+        {
             var type = GetType().ToString();
             var array = type.Split(".");
             // last index of the array
             return array[^1];
         }
 
-        public override bool Equals(object other) {
+        public override bool Equals(object other)
+        {
             //Sequence of checks should be exactly the following.
             //If you don't check "other" on null, then "other.GetType()" further can 
             //throw NullReferenceException
-            if (other == null) {
+            if (other == null)
+            {
                 return false;
             }
 
             //If references point to the same address, then objects identity is
             //guaranteed.
-            if (ReferenceEquals(this, other)) {
+            if (ReferenceEquals(this, other))
+            {
                 return true;
             }
 
@@ -43,19 +50,24 @@ namespace BerserkPixel.StateMachine {
             //inheritors, then you just can do the following:        
             //Vehicle tmp = other as Vehicle; if(tmp==null) return false;
             //After that you can immediately call this.Equals(tmp)
-            if (GetType() != other.GetType()) {
+            if (GetType() != other.GetType())
+            {
                 return false;
             }
 
             return Equals(other as T);
         }
 
-        public override int GetHashCode() {
+        public override int GetHashCode()
+        {
             unchecked // Overflow is fine, just wrap
             {
                 var hash = (int)2166136261;
                 // Suitable nullity checks etc, of course :)
-                hash = hash * 16777619 + name.GetHashCode();
+                // We use base.name only if the object is not destroyed to avoid MissingReferenceException
+                // It's important to use 'this != null' which invokes Unity's overloaded operator, and to check it FIRST
+                var nameHash = this != null && !string.IsNullOrEmpty(name) ? name.GetHashCode() : 0;
+                hash = hash * 16777619 + nameHash;
                 hash = hash * 16777619 + GetType().GetHashCode();
                 return hash;
             }
@@ -71,15 +83,18 @@ namespace BerserkPixel.StateMachine {
         ///     Removes a GameObject, component, or asset.
         /// </summary>
         /// <param name="obj">The type of Component to retrieve.</param>
-        protected new static void Destroy(Object obj) {
+        protected new static void Destroy(Object obj)
+        {
             Object.Destroy(obj);
         }
 
-        protected V AddComponent<V>() where V : Component {
+        protected V AddComponent<V>() where V : Component
+        {
             return _machine.gameObject.AddComponent<V>();
         }
 
-        protected V GetOrAdd<V>() where V : Component {
+        protected V GetOrAdd<V>() where V : Component
+        {
             var component = _machine.GetComponent<V>() ?? AddComponent<V>();
             return component;
         }
@@ -89,7 +104,8 @@ namespace BerserkPixel.StateMachine {
         /// </summary>
         /// <typeparam name="V"></typeparam>
         /// <returns></returns>
-        protected V GetComponent<V>() where V : Component {
+        protected V GetComponent<V>() where V : Component
+        {
             return _machine.GetComponent<V>();
         }
 
@@ -98,7 +114,8 @@ namespace BerserkPixel.StateMachine {
         /// </summary>
         /// <param name="type">The type of Component to retrieve.</param>
         /// <returns></returns>
-        protected Component GetComponent(Type type) {
+        protected Component GetComponent(Type type)
+        {
             return _machine.GetComponent(type);
         }
 
@@ -107,8 +124,14 @@ namespace BerserkPixel.StateMachine {
         /// </summary>
         /// <param name="type">The type of Component to retrieve.</param>
         /// <returns></returns>
-        protected Component GetComponent(string type) {
+        protected Component GetComponent(string type)
+        {
             return _machine.GetComponent(type);
+        }
+
+        protected bool TryGetComponent<V>(out V component) where V : Component
+        {
+            return _machine.TryGetComponent(out component);
         }
 
         /// <summary>
@@ -116,7 +139,8 @@ namespace BerserkPixel.StateMachine {
         /// </summary>
         /// <typeparam name="V"></typeparam>
         /// <returns></returns>
-        protected V GetComponentInChildren<V>() where V : Component {
+        protected V GetComponentInChildren<V>()
+        {
             return _machine.GetComponentInChildren<V>();
         }
 
@@ -125,7 +149,8 @@ namespace BerserkPixel.StateMachine {
         /// </summary>
         /// <typeparam name="V"></typeparam>
         /// <returns></returns>
-        public V[] GetComponentsInChildren<V>() where V : Component {
+        public V[] GetComponentsInChildren<V>()
+        {
             return _machine.GetComponentsInChildren<V>();
         }
 

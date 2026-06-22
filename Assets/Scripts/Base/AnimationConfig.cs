@@ -3,6 +3,10 @@ using Sirenix.OdinInspector;
 using UnityEngine;
 
 namespace Base {
+    /// <summary>
+    /// ScriptableObject that holds animation mappings for an entity.
+    /// It converts string animation names into Animator hash values for efficient lookup.
+    /// </summary>
     [CreateAssetMenu(fileName = "Animations", menuName = "Aurora/Config/Animations")]
     [InlineEditor]
     public class AnimationConfig : ScriptableObject {

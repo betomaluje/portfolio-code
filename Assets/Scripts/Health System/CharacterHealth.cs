@@ -1,10 +1,10 @@
-﻿using System;
-using System.Collections;
+using System;
 using Base;
+using Cysharp.Threading.Tasks;
 using UnityEngine;
 
 namespace BerserkPixel.Health {
-    public class CharacterHealth : MonoBehaviour, IHealth {
+    public class CharacterHealth : MonoBehaviour, IHealth, IHealthSetup {
         [Header("Config")]
         [SerializeField]
         private HealthConfig _healthConfig;
@@ -31,25 +31,21 @@ namespace BerserkPixel.Health {
 
         // used to see if an enemy can block damage.
         public event Action OnBlock = delegate { };
+        public event Action<HitData> OnHitReceived = delegate { };
         public event Action<HitData> OnDamagePerformed = delegate { };
         public event Action<int> OnGiveHealth = delegate { };
         public event Action OnDie = delegate { };
         public event Action<int, int> OnHealthChanged = delegate { };
         public event Action<float> OnPercentageChanged = delegate { };
 
+        public static event Action<HitData> OnAnyDamagePerformed = delegate { };
+
         private void Awake() {
             if (_maxHealth <= 0) {
-                SetupHealth(_healthConfig.MaxHealth);
+                SetupHealth(_healthConfig.MaxHealth, _healthConfig.MaxHealth);
             }
 
             CalculatePercentage();
-        }
-
-        public void SetupHealth(int maxHealth) {
-            _maxHealth = maxHealth;
-            CurrentHealth = maxHealth;
-
-            OnHealthChanged?.Invoke(CurrentHealth, _maxHealth);
         }
 
         private void HealthChanged(int newHealth) {
@@ -86,11 +82,39 @@ namespace BerserkPixel.Health {
             PerformDamage(hitData);
         }
 
-        private bool CheckIfBlocked() {
-            return _chanceToBlock >= UnityEngine.Random.value;
+        private bool CheckIfBlocked() => _chanceToBlock >= UnityEngine.Random.value;
+
+        #region IHealthSetup
+
+        public void SetupHealth(int maxHealth, int currentHealth, bool resetCurrentHealth = true) {
+            if (maxHealth == _maxHealth) {
+                return;
+            }
+
+            _maxHealth = maxHealth;
+
+            if (resetCurrentHealth) {
+                CurrentHealth = maxHealth;
+            }
+            else {
+                CurrentHealth = currentHealth;
+            }
+
+            OnHealthChanged?.Invoke(CurrentHealth, _maxHealth);
         }
 
-        #region IHealth
+        public void AddMaxHealth(int amount) {
+            if (amount <= 0) {
+                return;
+            }
+
+            _maxHealth = _healthConfig.MaxHealth + amount;
+            GiveHealth(amount);
+        }
+
+        #endregion
+
+        #region IHealth        
 
         public bool CanGiveHealth() => CurrentHealth > 0 && CurrentHealth != _maxHealth;
 
@@ -116,13 +140,11 @@ namespace BerserkPixel.Health {
         /// </summary>
         /// <param name="hitData"></param>
         public void PerformDamage(HitData hitData) {
+            OnHitReceived?.Invoke(hitData);
+            
             if (_isImmune) {
                 return;
             }
-
-            Weapons.Weapon weapon = hitData.weapon;
-            Vector3 direction = hitData.direction;
-            int damage = hitData.damage;
 
             if (CurrentHealth <= 0) {
                 OnDamagePerformed?.Invoke(hitData);
@@ -134,7 +156,9 @@ namespace BerserkPixel.Health {
                 return;
             }
 
-            direction = direction.normalized;
+            Weapons.Weapon weapon = hitData.weapon;
+            Vector3 direction = hitData.direction.normalized;
+            int damage = hitData.damage;
             var newHealth = CurrentHealth - damage;
 
             // if hp is lower than 0, set it to 0.
@@ -148,26 +172,23 @@ namespace BerserkPixel.Health {
             if (wasPlayerDamaged) {
                 // damaged performed
                 OnDamagePerformed?.Invoke(hitData);
+                OnAnyDamagePerformed?.Invoke(hitData);
             }
 
             // Apply damage and modify the "damage" property.
             HealthChanged(newHealth);
-            StartCoroutine(ImmunePlayer());
+            ImmuneCharacter();
         }
 
-        public void SetImmune() {
+        private async void ImmuneCharacter() {
             _isImmune = true;
-        }
-
-        public void ResetImmune() {
+            await UniTask.Delay(TimeSpan.FromSeconds(_timeForRecovery));
             _isImmune = false;
         }
 
-        private IEnumerator ImmunePlayer() {
-            _isImmune = true;
-            yield return new WaitForSeconds(_timeForRecovery);
-            _isImmune = false;
-        }
+        public void SetImmune() => _isImmune = true;
+
+        public void ResetImmune() => _isImmune = false;
 
         #endregion
     }

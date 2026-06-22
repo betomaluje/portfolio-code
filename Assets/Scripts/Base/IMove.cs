@@ -20,6 +20,10 @@ namespace Base {
 
         void FlipSprite(Vector2 direction);
 
+        void MakeBodyKinematic();
+
+        void MakeBodyDynamic();
+
         public float LastX { get; }
 
         public ParticleSystem MovementParticles { get; set; }

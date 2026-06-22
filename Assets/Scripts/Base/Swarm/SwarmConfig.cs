@@ -8,6 +8,7 @@ namespace Base.Swarm {
         [Min(0)]
         public int AmountToSpawn = 4;
 
+        [Searchable]
         public WeightedListItem<T>[] Prefabs;
 
         [BoxGroup("Debug", order: 100)]

@@ -2,8 +2,6 @@
 
 namespace BerserkPixel.Health {
     public interface IHealth {
-        void SetupHealth(int maxHealth);
-
         /// <summary>
         /// Performs a hitData into an Entity.
         /// </summary>
@@ -13,6 +11,14 @@ namespace BerserkPixel.Health {
         void GiveHealth(int health);
 
         bool CanGiveHealth();
+    }
+
+    public interface IHealthSetup {
+        int MaxHealth { get; }
+
+        void SetupHealth(int maxHealth, int currentHealth, bool resetCurrentHealth = true);
+
+        void AddMaxHealth(int amount);
     }
 
     [System.Serializable]

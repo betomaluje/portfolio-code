@@ -10,8 +10,6 @@ namespace BerserkPixel.Health {
     public class CharacterHealthModifiers : MonoBehaviour, IHealth {
         public readonly List<WeaponModifier> _activeModifiers = new();
 
-        public void SetupHealth(int maxHealth) { }
-
         public bool CanGiveHealth() => false;
 
         public void GiveHealth(int health) { }
@@ -21,6 +19,7 @@ namespace BerserkPixel.Health {
                 return;
             }
 
+            List<WeaponModifier> modifiersToRemove = new();
             foreach (var modifier in _activeModifiers) {
                 modifier.Tick(Time.deltaTime);
 
@@ -29,17 +28,26 @@ namespace BerserkPixel.Health {
                 }
 
                 modifier.Deactivate();
+                modifiersToRemove.Add(modifier);
+            }
+
+            foreach (var modifier in modifiersToRemove) {
                 _activeModifiers.Remove(modifier);
             }
         }
 
         private void OnDestroy() {
+            List<WeaponModifier> modifiersToRemove = new();
             foreach (var modifier in _activeModifiers) {
                 if (!modifier.MarkedForRemoval) {
                     continue;
                 }
 
                 modifier.Deactivate();
+                modifiersToRemove.Add(modifier);
+            }
+
+            foreach (var modifier in modifiersToRemove) {
                 _activeModifiers.Remove(modifier);
             }
         }

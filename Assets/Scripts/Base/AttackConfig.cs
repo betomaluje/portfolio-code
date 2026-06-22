@@ -2,6 +2,10 @@
 using UnityEngine;
 
 namespace Base {
+    /// <summary>
+    /// ScriptableObject that holds attack configuration for an entity.
+    /// Defines attack properties such as target mask, critical hit chance and multipliers, and hit pause durations.
+    /// </summary>
     [CreateAssetMenu(fileName = "Attack", menuName = "Aurora/Config/Attack")]
     [InlineEditor]
     public class AttackConfig : ScriptableObject {

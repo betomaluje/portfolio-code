@@ -1,6 +1,11 @@
 using UnityEngine;
 
 namespace Base.MovementPrediction {
+    /// <summary>
+    /// Calculates the optimal interception vector for a moving target, predicting where 
+    /// the target will be based on its current velocity and a given prediction chance.
+    /// Utilizes the quadratic kinematic equation to find the intercept time.
+    /// </summary>
     public class MovementPredictor {
         private readonly Rigidbody2D _targetRigidbody;
         private readonly Transform _targetTransform;
@@ -15,6 +20,11 @@ namespace Base.MovementPrediction {
             _targetRigidbody = targetTransform.GetComponent<Rigidbody2D>();
         }
 
+        /// <summary>
+        /// Predicts the direction the pursuer should move to intercept the target.
+        /// </summary>
+        /// <param name="isDebug">If true, draws rays in the Unity Editor to visualize the vector paths.</param>
+        /// <returns>A normalized direction vector pointing to the predicted intercept location, or direct LOS if prediction fails/chance misses.</returns>
         public Vector2 PredictTargetDirection(bool isDebug = false) {
             if (_targetTransform == null || _targetRigidbody == null || _selfTransform == null) {
                 return Vector2.zero;
@@ -43,6 +53,7 @@ namespace Base.MovementPrediction {
             Vector2 relativeVelocity = targetVelocity;
 
             // Solve using the quadratic formula: at^2 + bt + c = 0
+            // Where 't' is the time to interception
             float a = relativeVelocity.sqrMagnitude - targetSpeed * targetSpeed;
             float b = 2 * Vector2.Dot(relativePosition, relativeVelocity);
             float c = relativePosition.sqrMagnitude;

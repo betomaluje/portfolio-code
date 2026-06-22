@@ -23,6 +23,7 @@ namespace BerserkPixel.Health.FX {
         private Coroutine _skewRoutine;
         private WaitForSeconds _waitingTime;
         private Vector3 _originalScale;
+        private bool _isSkewing = false;
 
         public FXType GetFXType() => FXType.OnlyNotImmune;
 
@@ -35,23 +36,26 @@ namespace BerserkPixel.Health.FX {
 
         private void OnValidate() {
             if (_target == null) {
-                 var spriteObject = transform.parent.Find("Sprite");
+                var spriteObject = transform.parent.Find("Sprite");
                 _target = spriteObject;
             }
         }
 
+        private void OnDestroy() {
+            _target.localScale = _originalScale;
+        }
+
         public void DoFX(HitData hitData) {
-            // If the _skewRoutine is not null, then it is currently running.
+            if (_isSkewing) {
+                return;
+            }
+
+            _isSkewing = true;
+
             if (_skewRoutine != null) {
-                // In this case, we should stop it first.
-                // Multiple SkewRoutines the same time would cause bugs.
                 StopCoroutine(_skewRoutine);
             }
-            _originalScale = _target.localScale;
-            // Start the Coroutine, and store the reference for it.
-            Vector3 direction = hitData.direction;
-
-            _skewRoutine = StartCoroutine(SkewRoutine(Mathf.Sign(direction.x)));
+            _skewRoutine = StartCoroutine(SkewRoutine(Mathf.Sign(hitData.direction.x)));
         }
 
         private IEnumerator SkewRoutine(float hitDirectionX) {
@@ -79,6 +83,8 @@ namespace BerserkPixel.Health.FX {
 
             // Set the routine to null, signaling that it's finished.
             _skewRoutine = null;
+
+            _isSkewing = false;
         }
     }
 
